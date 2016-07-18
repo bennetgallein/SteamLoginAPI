@@ -2,7 +2,7 @@
 ob_start();
 session_start();
 
-function loginbutton($buttonstyle = "large_no") {
+function loginbutton($buttonstyle = "large_noborder") {
 	$button['small'] = "small";
 	$button['large_no'] = "large_noborder";
 	$button['large'] = "large_border";
@@ -11,7 +11,7 @@ function loginbutton($buttonstyle = "large_no") {
 	echo $button;
 }
 function logoutbutton() {
-    echo "<form action='' method='get'><button name='logout' type='submit'>Logout</button></form>";
+    echo "<form action='' method='get'><button class='logoutbutton' name='logout' type='submit'>Logout</button></form>";
 }
 if (isset($_GET['login'])) {
     require 'openid.php';
